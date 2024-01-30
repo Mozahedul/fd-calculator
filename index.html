@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>FD Calculator</title>
+  </head>
+  <body>
+    <section class="container">
+      <div>
+        <h2>FD Calculator</h2>
+        <form onsubmit="showMaturityAmount(event)" class="form">
+          <label for="principleAmount">Principle Amount:</label>
+          <input
+            type="number"
+            name="principle"
+            id="principle"
+            required
+            min="0"
+          />
+
+          <label for="interestRate">Interest Rate:</label>
+          <input
+            type="number"
+            name="interestRate"
+            id="interestRate"
+            required
+            min="0"
+            max="100"
+          />
+
+          <label for="tenure">Tenure(In Year):</label>
+          <input type="number" name="tenure" id="tenure" required min="0" />
+
+          <input type="submit" value="Calulate" class="submit" />
+        </form>
+        <p id="showMaturity"></p>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
